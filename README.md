@@ -95,3 +95,31 @@ It will backup gguf and modelfile into a folder:
 <img src="https://github.com/user-attachments/assets/c317203a-3b87-45c6-8d7d-a2b79bd10625" height="80">
 </p>
 
+To avoid unnecessary copying, by default it will skip the model if it already exists in the backup folder
+You can turn off this by delete 
+
+```
+    if os.path.exists(new_folder_path) and os.path.isdir(new_folder_path):
+        print(f"Model: '{model_name}' already exists in the backup folder, so it will be skipped.")
+        return
+```
+
+At:
+
+```
+    new_folder_path = os.path.join(BackUp_Folder, model_name)
+    
+    #****************************************************************
+    #****************************************************************
+    #****************************************************************
+    if os.path.exists(new_folder_path) and os.path.isdir(new_folder_path):
+        print(f"Model: '{model_name}' already exists in the backup folder, so it will be skipped.")
+        return
+    #****************************************************************
+    #****************************************************************
+    #****************************************************************
+
+    if not os.path.exists(new_folder_path):
+        os.makedirs(new_folder_path)
+        print(f"Created folder: {new_folder_path}")
+```
