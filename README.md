@@ -43,6 +43,13 @@ model_name = input("Enter model name: ")
 ```
 
 Then start Export_Model.py, enter the model name then click `Enter` key to start export the model.
+It will backup gguf and modelfile into a folder:
+
+<p align="left">
+<img src="https://github.com/user-attachments/assets/70083bea-575c-4b7f-b4f1-affb950b2286" height="80">
+<img src="https://github.com/user-attachments/assets/c317203a-3b87-45c6-8d7d-a2b79bd10625" height="80">
+</p>
+
 
 ---
 
@@ -72,3 +79,10 @@ def extract_names(data):
 ```
 
 Then start Backup_ALL_Models.py, it will strating to back up all of your models
+It will backup gguf and modelfile into a folder:
+
+<p align="left">
+<img src="https://github.com/user-attachments/assets/d2e5835b-bdea-4014-92b5-3c8aaca08aea" height="200">
+<img src="https://github.com/user-attachments/assets/c317203a-3b87-45c6-8d7d-a2b79bd10625" height="80">
+</p>
+
