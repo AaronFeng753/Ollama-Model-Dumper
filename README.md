@@ -146,3 +146,14 @@ scan_folder(r'E:\llama_backup')
 ```
 
 Then start Import_Models.py, it will strating to import all of your model backups into ollama
+
+---
+
+### ✨ Check out my other project: [Waifu2x-Extension-GUI](https://github.com/AaronFeng753/Waifu2x-Extension-GUI)
+
+#### Photo/Video/GIF enlargement and Video frame interpolation using machine learning
+
+#### Supports AMD / Nvidia / Intel GPU
+
+![](https://raw.githubusercontent.com/AaronFeng753/AaronFeng753/main/res/ReadMeCover.png)
+
