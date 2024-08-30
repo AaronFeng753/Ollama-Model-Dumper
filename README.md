@@ -9,7 +9,7 @@
 ### 📜How to use: 
 - [Export one model](https://github.com/AaronFeng753/Ollama-Model-Dumper#export-one-model)
 - [Backup ALL your models](https://github.com/AaronFeng753/Ollama-Model-Dumper#backup-all-your-models)
-- [Import your backup folder into ollama](https://github.com/AaronFeng753/Ollama-Model-Dumper/edit/main/README.md#import-your-backup-folder-into-ollama)
+- [Import your backup folder into ollama](https://github.com/AaronFeng753/Ollama-Model-Dumper#import-your-backup-folder-into-ollama)
 
 ### ⚠️Disclaimer:
 ```
