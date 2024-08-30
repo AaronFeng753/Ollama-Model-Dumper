@@ -9,6 +9,7 @@
 ### 📜How to use: 
 - [Export one model](https://github.com/AaronFeng753/Ollama-Model-Dumper#export-one-model)
 - [Backup ALL your models](https://github.com/AaronFeng753/Ollama-Model-Dumper#backup-all-your-models)
+- [Import your backup folder into ollama](https://github.com/AaronFeng753/Ollama-Model-Dumper/edit/main/README.md#import-your-backup-folder-into-ollama)
 
 ### ⚠️Disclaimer:
 ```
@@ -124,3 +125,24 @@ At:
         os.makedirs(new_folder_path)
         print(f"Created folder: {new_folder_path}")
 ```
+
+---
+
+#### ⭐ Make sure you already installed Python on your PC ⭐
+
+# Import your backup folder into ollama:
+
+Download [Import_Models.py](https://github.com/AaronFeng753/Ollama-Model-Dumper/blob/main/Import_Models.py)
+
+Edit `scan_folder` at the bottom of the file:
+```
+#****************************************************************
+
+# Your model backup folder:
+
+scan_folder(r'E:\llama_backup')
+
+#****************************************************************
+```
+
+Then start Import_Models.py, it will strating to import all of your model backups into ollama
