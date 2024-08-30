@@ -6,6 +6,8 @@
 <img src="https://github.com/user-attachments/assets/7e961393-5f2c-4a0b-afc5-57f49b0a490f" height="300">
 </p>
 
+### How to use: [Export one model](https://github.com/AaronFeng753/Ollama-Model-Dumper#export-one-model) / [Backup ALL your models](https://github.com/AaronFeng753/Ollama-Model-Dumper#backup-all-your-models)
+
 ---
 
 #### ✨ Check out my other project: [Waifu2x-Extension-GUI](https://github.com/AaronFeng753/Waifu2x-Extension-GUI)
