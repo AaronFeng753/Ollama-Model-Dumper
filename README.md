@@ -10,6 +10,13 @@
 - [Export one model](https://github.com/AaronFeng753/Ollama-Model-Dumper#export-one-model)
 - [Backup ALL your models](https://github.com/AaronFeng753/Ollama-Model-Dumper#backup-all-your-models)
 
+#### Disclaimer:
+```
+I have only tested these two scripts on Windows 11 + 0.3.8
+I am not sure if they will work correctly on Mac or Linux systems.
+This is just a free open-source script, I am not responsible for any consequences that may arise from your use of the code.
+```
+
 ---
 
 #### ✨ Check out my other project: [Waifu2x-Extension-GUI](https://github.com/AaronFeng753/Waifu2x-Extension-GUI)
