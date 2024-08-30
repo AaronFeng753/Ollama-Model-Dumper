@@ -19,7 +19,7 @@ This is just a free open-source script, I am not responsible for any consequence
 
 ---
 
-#### ✨ Check out my other project: [Waifu2x-Extension-GUI](https://github.com/AaronFeng753/Waifu2x-Extension-GUI)
+### ✨ Check out my other project: [Waifu2x-Extension-GUI](https://github.com/AaronFeng753/Waifu2x-Extension-GUI)
 
 #### Photo/Video/GIF enlargement and Video frame interpolation using machine learning
 
