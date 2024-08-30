@@ -12,7 +12,7 @@
 
 ### ⚠️Disclaimer:
 ```
-I have only tested these two scripts on Windows 11 + 0.3.8
+I have only tested these two scripts on Windows 11 + Ollama 0.3.8
 I am not sure if they will work correctly on Mac or Linux systems.
 This is just a free open-source script, I am not responsible for any consequences that may arise from your use of the code.
 ```
