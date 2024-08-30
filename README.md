@@ -1,4 +1,4 @@
-# Ollama-Model-Dumper
+# Ollama-Model-Dumper 🦙
 
 ### Export and Backup your Ollama models into GGUF and ModelFile
 
