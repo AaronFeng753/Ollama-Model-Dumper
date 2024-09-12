@@ -10,6 +10,7 @@
 - [Export one model](https://github.com/AaronFeng753/Ollama-Model-Dumper#export-one-model)
 - [Backup ALL your models](https://github.com/AaronFeng753/Ollama-Model-Dumper#backup-all-your-models)
 - [Import your backup folder into ollama](https://github.com/AaronFeng753/Ollama-Model-Dumper#import-your-backup-folder-into-ollama)
+- [Update ALL your models]()
 
 ### ⚠️Disclaimer:
 ```
@@ -146,6 +147,18 @@ scan_folder(r'E:\llama_backup')
 ```
 
 Then start Import_Models.py, it will strating to import all of your model backups into ollama
+
+---
+
+#### ⭐ Make sure you already installed Python on your PC ⭐
+
+# Update your ollama models:
+
+Download: [Update_ALL_Models.py](https://github.com/AaronFeng753/Ollama-Model-Dumper/blob/main/Update_ALL_Models.py)
+
+Then start Update_ALL_Models.py, it will strating to update all of your ollama models using ollama's pull command.
+
+Only the models you downloaded from ollama.com will be updated.
 
 ---
 
