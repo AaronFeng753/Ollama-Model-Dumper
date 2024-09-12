@@ -1,3 +1,5 @@
+# This Python script utilizes the pull command of ollama to simultaneously update all models downloaded from ollama.com
+
 import subprocess
 import re
 import os
