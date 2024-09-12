@@ -10,7 +10,7 @@
 - [Export one model](https://github.com/AaronFeng753/Ollama-Model-Dumper#export-one-model)
 - [Backup ALL your models](https://github.com/AaronFeng753/Ollama-Model-Dumper#backup-all-your-models)
 - [Import your backup folder into ollama](https://github.com/AaronFeng753/Ollama-Model-Dumper#import-your-backup-folder-into-ollama)
-- [Update ALL your models](https://github.com/AaronFeng753/Ollama-Model-Dumper/blob/main/README.md#update-your-ollama-models)
+- [Update your ollama models](https://github.com/AaronFeng753/Ollama-Model-Dumper/blob/main/README.md#update-your-ollama-models)
 
 ### ⚠️Disclaimer:
 ```
