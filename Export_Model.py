@@ -2,19 +2,54 @@ import subprocess
 import re
 import os
 import shutil
+import platform
 
 def sanitize_filename_MF(name):
     name = name.replace(":latest","")
     return re.sub(r'[<>:"/\\|?*.]', '-', name)
 
 def run_command(command):
-    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, text=True, creationflags=subprocess.CREATE_NO_WINDOW, encoding='utf-8')
+    """
+    Executes a shell command on both Windows and Linux systems.
+    Args:
+        command (str): The command to be executed.
+    Returns:
+        str: The standard output of the command, with leading and trailing whitespace removed.
+    Raises:
+        subprocess.CalledProcessError: If the command returns a non-zero exit status.
+    Notes:
+        - On Windows, the command is executed with the `CREATE_NO_WINDOW` flag to prevent a console window from appearing.
+        - On both Windows and Linux, the command is executed with `shell=True` to allow shell features like piping and redirection.
+        - The function captures both standard output and standard error, but only returns the standard output.
+    """
+    if platform.system() == "Windows":
+        process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, text=True, creationflags=subprocess.CREATE_NO_WINDOW, encoding='utf-8')
+    else:
+        process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, text=True, encoding='utf-8')
 
     output_text, error_text = process.communicate()
 
     return output_text.strip()
 
 def create_ollama_model_file(model_name, output_file, BackUp_Folder, Ollama_Model_Folder):
+    """
+    Creates a model file for the specified Ollama model.
+    This function generates a model file by extracting the template, parameters, 
+    system message, and model file location for the given model name. It then 
+    creates a backup folder if it doesn't exist, writes the model content to the 
+    specified output file, and copies the model file to the backup folder.
+    Args:
+        model_name (str): The name of the Ollama model.
+        output_file (str): The name of the output file to create.
+        BackUp_Folder (str): The path to the backup folder where the model file will be saved.
+        Ollama_Model_Folder (str): The path to the folder containing the Ollama models.
+    Returns:
+        None
+    Raises:
+        None
+    Example:
+        create_ollama_model_file("example_model", "output.txt", "/path/to/backup", "/path/to/models")
+    """
     template_command = f'ollama show --template {model_name}'
     template = run_command(template_command)
     
@@ -51,7 +86,7 @@ TEMPLATE """ + '"""' + f"""{template}""" + '"""' + "\n"
     
     print(model_content)
     
-    with open(os.path.join(new_folder_path, output_file), 'w') as file:
+    with open(os.path.join(new_folder_path, output_file), 'w', encoding="utf-8") as file:
         file.write(model_content)
     
     print(f'Model file created: {output_file}')
@@ -77,9 +112,11 @@ TEMPLATE """ + '"""' + f"""{template}""" + '"""' + "\n"
 #****************************************************************
 # Your ollama model folder:
 Ollama_Model_Folder = r"D:\llama\.ollama\models"
+# Ollama_Model_Folder = "/mnt/d/llama/.ollama/models"  # Linux version
 
 # Where you want to back up your models:
 BackUp_Folder = r"E:\llama_backup"
+# BackUp_Folder = "/mnt/e/llama_backup"  # Linux version
 #****************************************************************
 #****************************************************************
 #****************************************************************

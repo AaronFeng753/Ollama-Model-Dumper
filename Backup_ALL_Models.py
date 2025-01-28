@@ -15,6 +15,28 @@ def run_command(command):
     return output_text.strip()
 
 def create_ollama_model_file(model_name, output_file, BackUp_Folder, Ollama_Model_Folder):
+    """
+    Creates a backup of an Ollama model by generating a model file with its template, parameters, and system messages.
+    Args:
+        model_name (str): The name of the Ollama model to back up.
+        output_file (str): The name of the output file to create in the backup folder.
+        BackUp_Folder (str): The path to the folder where the backup will be stored.
+        Ollama_Model_Folder (str): The path to the folder where the original Ollama models are stored.
+    Returns:
+        None
+    The function performs the following steps:
+    1. Retrieves the template, parameters, system message, and model file location of the specified model.
+    2. Sanitizes the model name to create a valid folder name.
+    3. Checks if a backup folder for the model already exists. If it does, the function skips the backup.
+    4. Creates a new folder for the model backup if it does not already exist.
+    5. Constructs the content of the model file using the retrieved template, parameters, and system message.
+    6. Writes the constructed content to the specified output file in the backup folder.
+    7. Extracts the model file location from the retrieved model file message.
+    8. Copies and renames the model file to the backup folder if it exists.
+    Note:
+        The function assumes the existence of helper functions `run_command` and `sanitize_filename_MF`.
+        It also uses the `os`, `shutil`, and `re` modules for file operations and regular expressions.
+    """
     template_command = f'ollama show --template {model_name}'
     template = run_command(template_command)
     
@@ -61,7 +83,7 @@ TEMPLATE """ + '"""' + f"""{template}""" + '"""' + "\n"
     
     print(model_content)
     
-    with open(os.path.join(new_folder_path, output_file), 'w') as file:
+    with open(os.path.join(new_folder_path, output_file), 'w', encoding="utf-8") as file:
         file.write(model_content)
     
     print(f'Model file created: {output_file}')
